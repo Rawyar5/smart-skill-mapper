@@ -32,7 +32,7 @@ jobs = pd.DataFrame([
      "link": "https://www.naukri.com"},
     {"job_title": "Python Intern",
      "skills": "python, programming",
-     "link": "https://www.naukri.com"}
+     "link": "https://www.naukri.com"},
     {"job_title": "SQL",
      "skills": "sql",
      "link": "https://www.naukri.com"},
@@ -85,6 +85,7 @@ if st.button("Find Matches"):
     for _, row in recommended_jobs.iterrows():
         if row['match_score'] > 0:
             st.markdown(f"- [{row['job_title']}]({row['link']}) (score: {row['match_score']})")
+
 
 
 
