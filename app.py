@@ -50,10 +50,10 @@ def score_item(user_skills, item_skills_str):
     return len(set(user_skills) & set(item_skills))
 
 # === Streamlit UI ===
-st.title("Smart Job–Skill Mapper")
+st.title("JOB FINDER")
 
 user_input = st.text_area("Enter your skills, hobbies, or marks:", 
-                          "I know python, excel and social media marketing")
+                          "Cancel this and enter your skills")
 
 if st.button("Find Matches"):
     # Build combined skill list
@@ -85,6 +85,7 @@ if st.button("Find Matches"):
     for _, row in recommended_jobs.iterrows():
         if row['match_score'] > 0:
             st.markdown(f"- [{row['job_title']}]({row['link']}) (score: {row['match_score']})")
+
 
 
 
