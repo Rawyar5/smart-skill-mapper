@@ -15,6 +15,9 @@ courses = pd.DataFrame([
     {"course_name": "HTML & CSS Fundamentals",
      "skills": "html, css, web",
      "link": "https://www.codecademy.com/learn/learn-html"}
+    {"course_name" : "SQL & App Development" ,
+     "skills": "sql , app development" ,
+     "link": "https://www.coursera.org/learn/sql"},
 ])
 
 jobs = pd.DataFrame([
@@ -30,6 +33,12 @@ jobs = pd.DataFrame([
     {"job_title": "Python Intern",
      "skills": "python, programming",
      "link": "https://www.naukri.com"}
+    {"job_title": "SQL",
+     "skills": "sql",
+     "link": "https://www.naukri.com"},
+    {"job_title": "App Development",
+     "skills": "app development",
+     "link": "https://www.naukri.com"},
 ])
 
 # === Utility functions ===
@@ -76,3 +85,4 @@ if st.button("Find Matches"):
     for _, row in recommended_jobs.iterrows():
         if row['match_score'] > 0:
             st.markdown(f"- [{row['job_title']}]({row['link']}) (score: {row['match_score']})")
+
