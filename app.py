@@ -17,7 +17,7 @@ courses = pd.DataFrame([
      "link": "https://www.codecademy.com/learn/learn-html"}
     {"course_name" : "SQL & App Development" ,
      "skills": "sql , app development" ,
-     "link": "https://www.coursera.org/learn/sql"},
+     "link": "https://www.coursera.org/courses?query=sql"},
 ])
 
 jobs = pd.DataFrame([
@@ -85,4 +85,5 @@ if st.button("Find Matches"):
     for _, row in recommended_jobs.iterrows():
         if row['match_score'] > 0:
             st.markdown(f"- [{row['job_title']}]({row['link']}) (score: {row['match_score']})")
+
 
